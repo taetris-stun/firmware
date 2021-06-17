@@ -7,9 +7,9 @@
 #include <ESP_DoubleResetDetector.h>
 
 #define AP_PASSWORD "tinkertoe"
-#define SERVER_ADDRESS "taetris-stun.tinkertoe.net"
+#define SERVER_ADDRESS "192.168.43.219"
 #define SERVER_PORT 3001
-#define SHOCKER_ID "4ta82s"
+#define SHOCKER_ID "3f7dm9"
 #define TRIGGER_PIN 14
 #define RESET_TIMEOUT 1000
 #define RESET_ADDRESS 0
@@ -19,7 +19,7 @@ int shockTime = 0;
 
 void setupWifi() {
   WiFiManager wifiManager;
-  wifiManager.setDebugOutput(false);
+  wifiManager.setDebugOutput(true);
 
   DoubleResetDetector* resetDetector = new DoubleResetDetector(RESET_TIMEOUT / 1000, RESET_ADDRESS);
 
